@@ -1,11 +1,13 @@
 let rndNum;
 let guesses;
+let time;
 function setup(){
   rndNum = Math.random()*100
   rndNum = Math.floor(rndNum) + 1;
   console.log(rndNum)
   guesses = 0;
-  
+  time = 60;
+  setInterval(countDown, 1000);
 }//end setup
 
 function myFunction(){
@@ -20,3 +22,7 @@ function myFunction(){
     document.getElementById("feedback").innerHTML = "You Got!!";
   }
 }//end function
+function countDown(){
+  time = time -1;
+  document.getElementById("timer").innerHTML = "Time: " + time;
+}
