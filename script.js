@@ -11,7 +11,7 @@ function setup(){
 function myFunction(){
   let theirGuess = document.getElementById("theirGuess").value;
   guesses += 1;
-  document.getElementById("guesses").innerHTML = guesses;
+  document.getElementById("guesses").innerHTML = "Guesses: " + guesses;
   if(theirGuess > rndNum){
     document.getElementById("feedback").innerHTML = "Too High";
   }else if(theirGuess < rndNum){
